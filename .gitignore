@@ -1,0 +1,7 @@
+# General
+__pycache__/
+.python-version
+.env
+.logs
+
+# Not required

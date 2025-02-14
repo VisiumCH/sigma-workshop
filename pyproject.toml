@@ -1,0 +1,14 @@
+[project]
+name = "sigma-workshop"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "ipykernel>=6.29.5",
+    "langchain>=0.3.18",
+    "langchain-core>=0.3.35",
+    "langchain-openai>=0.3.5",
+    "langgraph>=0.2.72",
+    "ruff>=0.9.6",
+]
