@@ -1,0 +1,15 @@
+{
+    "messages": [
+        "Let the fight begin!",
+        "Aquí tienes el siguiente movimiento del luchador 1 (Carlos): patada\n\nAquí tienes el siguiente movimiento del luchador 2 (Alejandro): golpe\n"
+    ],
+    "fight_evolution": [
+        "Aquí tienes el escenario inicial de la pelea:\nMontañas, en medio de la naturaleza, absolutamente solos.\nSe percibe la brisa del viento y un pequeño riachuelo a lo lejos.\nA pesar de la niebla, los dos luchadores se miran ferozmente y saben que la pelea está a punto de comenzar...\n\nAquí tienes la descripción del luchador 1, Carlos: Carlos ha sido considerado un gran deportista durante mucho tiempo, pero últimamente no se mueve tanto y eso le está pasando factura. Sin embargo, su empeño y esfuerzo le hacen ser un combatiente peligroso.\n\nAquí tienes la descripción del luchador 2, Alejandro: Alejandro está en forma y está yendo al gimnasio. Cada vez tiene más músculo pero eso hace que sea un poco lento. Sus golpes son potentes y certeros.\n",
+        "COMIENZA LA RONDA 1!",
+        "¡Y así comienza la explosiva Ronda 1! La niebla se espesa mientras Carlos y Alejandro se miran ferozmente, cada uno intentando descifrar la estrategia del otro. De repente, Carlos, confiado como un gato que acaba de encontrar un ovillo, decide lanzar una audaz *patada* hacia Alejandro. Con su agilidad de 5, Carlos se mueve como si estuviera en una danza, lo cual es un poco triste considerando que no está bailarín de salsa, pero en fin.\n\nLa buena suerte acompaña a Carlos, y gracias a su multiplicador de 1.5, invoca una energía casi mística a su patada. Con la fuerza de 3, multiplica el daño por 1.5, ¡lo que resulta en 4.5 puntos de daño, redondeemos a 5! Pero aquí viene lo bueno: ¡Alejandro no se lo espera! Efectivamente, ¡Carlos remata la patada en el estómago de Alejandro!\n\nAlejandro, sorprendido y sintiéndose un poco como un pez fuera del agua, intenta reaccionar. Es como si un licencia para golpear se le hubiera otorgado, ¡y decide lanzar un *golpe* directo a la cara de Carlos! Sin embargo, con su agilidad de 3, da más un paso que un bocado en esta danza del combate. Debido a su fuerza de 4 y a una armadura de 3, Carlos logra reducir el daño sustancialmente.\n\nAlejandro lanza su golpe… ¡y oh no! Con el cansancio acumulado de estar en forma (sí, la ironía), el golpe apenas causa 1 punto de daño, pues sólo logra tocar la barbilla de Carlos antes de que este se mueva, burlándose mientras lanza una pequeña risa que hace eco en la montaña.\n\nLa ronda termina, pero no sin antes que Carlos, viéndose como un guerrero legendario (aunque es solo un apasionado del fútbol), sonríe orgulloso mientras se ahorra otro par de pasos de baile. ¿Qué pasará en la próxima ronda? ¡Permanezcan atentos y cuídense de las galletas en el camino! \n\n**Salud restante:**  \nCarlos: 50 - 1 = 49  \nAlejandro: 60 - 5 = 55",
+        [
+            "FIN DE LA PELEA!",
+            "GANADOR: Carlos\nPERDEDOR: Alejandro"
+        ]
+    ]
+}

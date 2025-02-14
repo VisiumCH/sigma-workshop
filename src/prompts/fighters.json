@@ -1,0 +1,32 @@
+{
+    "fighter1": {
+        "name": "Carlos",
+        "description": "Carlos ha sido considerado un gran deportista durante mucho tiempo, pero últimamente no se mueve tanto y eso le está pasando factura. Sin embargo, su empeño y esfuerzo le hacen ser un combatiente peligroso.",
+        "stats": {
+            "health": 50,
+            "strength": 3,
+            "speed": 10,
+            "agility": 5,
+            "intelligence": 6,
+            "armor": 3,
+            "level": 1,
+            "exp": 0,
+            "tiredness": 0
+        }
+    },
+    "fighter2": {
+        "name": "Alejandro",
+        "description": "Alejandro está en forma y está yendo al gimnasio. Cada vez tiene más músculo pero eso hace que sea un poco lento. Sus golpes son potentes y certeros.",
+        "stats": {
+            "health": 60,
+            "strength": 4,
+            "speed": 6,
+            "agility": 3,
+            "intelligence": 6,
+            "armor": 4,
+            "level": 1,
+            "exp": 0,
+            "tiredness": 0
+        }
+    }
+}
