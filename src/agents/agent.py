@@ -3,12 +3,11 @@
 import json
 import time
 
-from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
+from langchain_core.messages import AIMessage, HumanMessage, SystemMessage, ToolMessage
 from langgraph.graph import END, START, StateGraph
 from langgraph.prebuilt import ToolNode
 from pydantic import BaseModel
 
-from src.utils.logger import logger
 from src.agents.state import FightState
 from src.prompts.prompts import (
     FIGHT_EVOLUTION_PROMPT,
@@ -26,11 +25,12 @@ from src.utils.databases import (
     update_leaderboard,
     update_scores,
 )
-from src.utils.utils import pop_persisted_keys, tprint, log_state
+from src.utils.logger import logger
+from src.utils.utils import log_state, pop_persisted_keys, tprint
 
 
 class AgenticFight:
-    MAX_ROUNDS = 1
+    MAX_ROUNDS = 3
 
     def __init__(self, model, tools, checkpointer=None):
         self.model = model
@@ -120,8 +120,9 @@ class AgenticFight:
         ]
         logger.info("Prompts assigned!")
 
-        # Set round variable
+        # Set some state variables
         state["round"] = 0
+        state["modifiers"] = ""
 
         state = pop_persisted_keys(state, keys=["messages"])
         log_state(logger, state)
@@ -155,17 +156,26 @@ class AgenticFight:
         return state
 
     def orchestrator(self, state: FightState):
-        modifiers = ORCHESTRATOR_PROMPT.format(
+        query_modifiers = ORCHESTRATOR_PROMPT.format(
             fight_evolution=state["fight_evolution"],
             fighters_moves=state["messages"][-1].content,
+            modifiers=state["modifiers"],
         )
-        # TODO: solve generation issue
-        state["modifiers"] = (
-            "El luchador 1 tiene buena suerte y tiene un multiplicador de 1.5!"  # "\n".join(self.model.invoke([SystemMessage(content=modifiers)]))
-        )
-        logger.info(state["modifiers"])
 
-        state = pop_persisted_keys(state)
+        # TODO: solve generation issue
+        import random
+
+        state["modifiers"] = (
+            f"Fighter {random.choice(['1', '2'])} hit multiplier: {random.choices([0.5, 1, 1.5, 2], weights=[0.1, 0.6, 0.2, 0.1], k=1)[0]}"
+        )
+        # result = self.model.invoke([HumanMessage(content=query_modifiers)])
+        # logger.warning(result)
+
+        # state["messages"] = [result]
+
+        logger.info(f"Modifiers - {state['modifiers']}")
+
+        state = pop_persisted_keys(state, keys=["fight_evolution"])
         log_state(logger, state)
         time.sleep(3)
 
@@ -200,6 +210,9 @@ class AgenticFight:
         state["fight_evolution"] = [result.round_development]
         logger.info(result.round_development)
 
+        # Reset modifiers state
+        state["modifiers"] = ""
+
         state = pop_persisted_keys(state, keys=["messages"])
         log_state(logger, state)
         time.sleep(3)
@@ -218,7 +231,9 @@ class AgenticFight:
         state["winner"] = result.winner
         state["loser"] = result.loser
 
-        fight_evolution.append(f"GANADOR: {state['winner']}\nPERDEDOR: {state['loser']}")
+        fight_evolution.append(
+            f"GANADOR: {state['winner']}\nPERDEDOR: {state['loser']}"
+        )
         state["fight_evolution"] = [fight_evolution]
 
         logger.info(fight_evolution)

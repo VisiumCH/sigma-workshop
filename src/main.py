@@ -5,14 +5,14 @@ import sys
 
 sys.path.append(os.path.abspath(os.path.dirname(__file__) + "/.."))
 
+from langchain_core.messages import SystemMessage
 from langchain_openai import ChatOpenAI
 from langgraph.checkpoint.memory import MemorySaver
-from langchain_core.messages import SystemMessage
 
 from src.agents.agent import AgenticFight
 from src.agents.agentic_tools import modifiers, special_hits
-from src.utils.utils import log_state
 from src.utils.logger import logger
+from src.utils.utils import log_state
 
 
 # Get and set API keys
@@ -23,13 +23,13 @@ def _set_env(var: str):
 
 _set_env("OPENAI_API_KEY")
 
-#_set_env("LANGSMITH_API_KEY")
-#os.environ["LANGSMITH_TRACING"] = "true"
-#os.environ["LANGSMITH_ENDPOINT"] = "https://api.smith.langchain.com"
-#os.environ["LANGSMITH_PROJECT"] = "agentic-fighters"
-#_set_env("LANGCHAIN_API_KEY")
-#os.environ["LANGCHAIN_TRACING_V2"] = "true"
-#os.environ["LANGCHAIN_PROJECT"] = "agentic-fighters"
+# _set_env("LANGSMITH_API_KEY")
+# os.environ["LANGSMITH_TRACING"] = "true"
+# os.environ["LANGSMITH_ENDPOINT"] = "https://api.smith.langchain.com"
+# os.environ["LANGSMITH_PROJECT"] = "agentic-fighters"
+# _set_env("LANGCHAIN_API_KEY")
+# os.environ["LANGCHAIN_TRACING_V2"] = "true"
+# os.environ["LANGCHAIN_PROJECT"] = "agentic-fighters"
 
 # Create llm instance and add tools
 llm = ChatOpenAI(model="gpt-4o-mini", temperature=1)
