@@ -4,16 +4,20 @@
 
 Let's try to create an agentic architecture to generate a fight, having the generation of the fight made by an LLM!
 
+To execute the *Agentic_fighters*, you can do it in 2 ways:
+
+- run the src/main.py file from the root directory
+- move the Exercise 5 notebook to the root directory, and run it
+
 ## What are agents?
 
-Un agente es un sistema que percibe su entorno, toma decisiones y emprende acciones de forma autónoma.
+An agent is a system that perceives its environment, makes decisions and takes actions autonomously.
 
-En lugar de programar un flujo de control fijo, a veces queremos sistemas LLM que puedan elegir su propio flujo de control para resolver problemas más complejos:
+Instead of programming a fixed control flow, we sometimes want LLM systems that can choose their own control flow to solve more complex problems:
 
-- un LLM puede decidir entre dos rutas potenciales
-- un LLM puede decidir a cuál de las muchas herramientas llamar
-- un LLM puede decidir si la respuesta generada es suficiente o si se necesita más trabajo
-
+- an LLM can decide between two potential routes
+- an LLM can decide which of the many tools to call
+- an LLM can decide whether the generated response is sufficient or if more work is needed
 
 ![Diagram of the agentic fighters](images/Agentic_fighters.png)
 
@@ -33,7 +37,8 @@ En lugar de programar un flujo de control fijo, a veces queremos sistemas LLM qu
 #### Hardware / Software
 
 - A Python 3.11 environment
-- Jupyter notebooks (Google Colab works)
+- An OPENAI_API_KEY
+- A TAVILY_API_KEY for exercise 3 (created for free in [https://tavily.com/](https://tavily.com/))
 
 #### Knowledge
 
