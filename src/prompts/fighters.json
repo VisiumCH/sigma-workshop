@@ -1,13 +1,13 @@
 {
     "fighter1": {
-        "name": "Carlos",
-        "description": "Carlos ha sido considerado un gran deportista durante mucho tiempo, pero últimamente no se mueve tanto y eso le está pasando factura. Sin embargo, su empeño y esfuerzo le hacen ser un combatiente peligroso.",
+        "name": "Amra",
+        "description": "Amra, your agentic CFO-hitman hybrid: the Financial Enforcer. Amra is a highly disciplined, hyper-logical agent with a background in finance... and covert operations. She's ruthlessly efficient, always operates by the numbers, and never misses a decimal—or a target. Amra approaches every task like a mission: assess, plan, execute, balance. Whether it's closing budgets or closing contracts, she gets the job done with cold precision. Known for her methodical strategies, she prioritizes optimization, resource control, and high ROI—especially when the stakes are high.",
         "stats": {
-            "health": 50,
-            "strength": 3,
+            "health": 25,
+            "strength": 5,
             "speed": 10,
-            "agility": 5,
-            "intelligence": 6,
+            "agility": 6,
+            "intelligence": 10,
             "armor": 3,
             "level": 1,
             "exp": 0,
@@ -15,14 +15,14 @@
         }
     },
     "fighter2": {
-        "name": "Alejandro",
-        "description": "Alejandro está en forma y está yendo al gimnasio. Cada vez tiene más músculo pero eso hace que sea un poco lento. Sus golpes son potentes y certeros.",
+        "name": "Pascal",
+        "description": "Pascal: the Velocity Virtuoso. Pascal is a high-performance agent built for speed, precision, and impact. As both a technical lead and product strategist, he thrives at the intersection of engineering execution and product vision. Fueled by protein bars and brutal training regimens, Pascal treats every sprint like a race—and he’s always gunning for a personal best. With a black belt in karate and a backlog that fears him, he delivers clean architecture, strategic roadmaps, and the occasional roundhouse kick to scope creep.",
         "stats": {
-            "health": 60,
-            "strength": 4,
+            "health": 20,
+            "strength": 6,
             "speed": 6,
             "agility": 3,
-            "intelligence": 6,
+            "intelligence": 10,
             "armor": 4,
             "level": 1,
             "exp": 0,

@@ -38,7 +38,7 @@ llm_with_tools = llm.bind_tools(tools)
 
 # Create agent
 abot = AgenticFight(llm_with_tools, tools, checkpointer=MemorySaver())
-thread = {"configurable": {"thread_id": "fight1"}}
+thread = {"configurable": {"thread_id": "AmraVsPascal"}}
 
 # THE FIGHT BEGINS!
 first = True
@@ -65,7 +65,7 @@ while True:
             "messages": [str(msg.content) for msg in event["messages"]],
             "fight_evolution": event["fight_evolution"],
         }
-        fight_json_filename = "./data/fight1.json"
+        fight_json_filename = f"./data/{thread['configurable']['thread_id']}.json"
         with open(fight_json_filename, "w", encoding="utf-8") as f:
             json.dump(fight_dict, f, ensure_ascii=False, indent=4)
 

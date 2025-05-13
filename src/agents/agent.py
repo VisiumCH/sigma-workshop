@@ -135,8 +135,8 @@ class AgenticFight:
         # Human feedback node
 
         state["round"] += 1
-        state["fight_evolution"] = [f"COMIENZA LA RONDA {state['round']}!"]
-        logger.info(f"COMIENZA LA RONDA {state['round']}!")
+        state["fight_evolution"] = [f"ROUND {state['round']} BEGINS!"]
+        logger.info(f"ROUND {state['round']} BEGINS!")
 
         state["messages"] = [
             HumanMessage(
@@ -221,7 +221,7 @@ class AgenticFight:
 
     def updater(self, state: FightState):
         # Get results from the fight
-        fight_evolution = ["FIN DE LA PELEA!"]
+        fight_evolution = ["FIGHT ENDS!"]
         logger.info(fight_evolution)
 
         context = UPDATER_PROMPT.format(fight_evolution=state["fight_evolution"])
@@ -232,7 +232,7 @@ class AgenticFight:
         state["loser"] = result.loser
 
         fight_evolution.append(
-            f"GANADOR: {state['winner']}\nPERDEDOR: {state['loser']}"
+            f"WINNER: {state['winner']}\nLOSER: {state['loser']}"
         )
         state["fight_evolution"] = [fight_evolution]
 
