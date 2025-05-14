@@ -16,7 +16,7 @@
     },
     "fighter2": {
         "name": "Pascal",
-        "description": "Pascal: the Velocity Virtuoso. Pascal is a high-performance agent built for speed, precision, and impact. As both a technical lead and product strategist, he thrives at the intersection of engineering execution and product vision. Fueled by protein bars and brutal training regimens, Pascal treats every sprint like a race—and he’s always gunning for a personal best. With a black belt in karate and a backlog that fears him, he delivers clean architecture, strategic roadmaps, and the occasional roundhouse kick to scope creep.",
+        "description": "Pascal: the Velocity Virtuoso. Pascal is a high-performance agent built for speed, precision, and impact. As both a technical lead and product strategist, he thrives at the intersection of engineering execution and product vision. Fueled by protein bars and brutal training regimens, Pascal treats every sprint like a race—and he's always gunning for a personal best. With a black belt in karate and a backlog that fears him, he delivers clean architecture, strategic roadmaps, and the occasional roundhouse kick to scope creep.",
         "stats": {
             "health": 20,
             "strength": 6,

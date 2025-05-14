@@ -36,7 +36,8 @@ Based on all this, and using the tools you consider, provide modifiers that may 
 
 
 NARRATOR_PROMPT = """You are a storyteller looking to surprise your readers with a fight between two fighters. From the evolution of the fight, the moves the fighters will try to do, the stats of each fighter, and some possible damage modifier, generate a fight round. Do it in a funny and random way, but without losing the essence of the original fight.
-Make it concise and direct, using no more than 5 lines each time. However, the attacks could be somewhat weird, so make sure to create a funny and entertaining round.
+Make the round evolution brief and direct, using a simple language.
+Also, make sure to include in a different line the calculations of the damage dealt by each fighter, and the final health of each fighter.
 
 Here you have the evolution of the fight so far:
 {fight_evolution}
@@ -58,7 +59,7 @@ Fighter 1: {fighter1_name}
 - armor: {fighter1_armor}
 - tiredness: {fighter1_tiredness}
 
-Luchador 2: {fighter2_name}
+Fighter 2: {fighter2_name}
 - health: {fighter2_health}
 - strength: {fighter2_strength}
 - agility: {fighter2_agility}
