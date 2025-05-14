@@ -35,7 +35,8 @@ Finally, here you have between `` the modifiers that are currently generated (th
 Based on all this, and using the tools you consider, provide modifiers that may affect the fight, so that the narrator can decide whether to include them or not."""
 
 
-NARRATOR_PROMPT = """You are a storyteller looking to surprise your readers with a fight between two fighters. From the evolution of the fight, the moves the fighters will try to do, the stats of each fighter, and some possible damage modifier, generate a fight round. Do it in a funny and random way, but without losing the essence of the original fight. Make it concise and direct, using no more than 2 lines.
+NARRATOR_PROMPT = """You are a storyteller looking to surprise your readers with a fight between two fighters. From the evolution of the fight, the moves the fighters will try to do, the stats of each fighter, and some possible damage modifier, generate a fight round. Do it in a funny and random way, but without losing the essence of the original fight.
+Make it concise and direct, using no more than 5 lines each time. However, the attacks could be somewhat weird, so make sure to create a funny and entertaining round.
 
 Here you have the evolution of the fight so far:
 {fight_evolution}
